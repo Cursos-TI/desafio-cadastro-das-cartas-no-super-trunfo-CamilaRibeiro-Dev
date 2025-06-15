@@ -15,6 +15,8 @@ int main() {
     float area;
     float pib;
     int pontos;
+    float densidade;
+    float percapta;
     
     char estado2 [15];
     char codigo2 [15];
@@ -23,6 +25,8 @@ int main() {
     float area2;
     float pib2;
     int pontos2;
+    float densidade2;
+    float percapta2;
     
     // Cadastro da Carta1:
     printf("Insira os dados da Carta 1:\n");
@@ -48,8 +52,13 @@ int main() {
     printf("Pontos turisticos: \n");
     scanf("%d",&pontos);
 
+    // Calculo densidade populacional e percapta carta 1
+
+    densidade = populacao / area;
+    percapta = pib / populacao;
+
     // Exibição dos Dados das Carta2:
-    printf("\nObrigado pelo cadastro.Esses sao os dados da Carta 1:\n\n Estado: %s\n Codigo: %s\n Cidade: %s\n Populacao: %d\n Area: %f Km²\n  PIB: %f Bilhoes de reais\n Pontos Turisticos: %d\n", estado , codigo , cidade , populacao , area , pib , pontos);
+    printf("\nObrigado pelo cadastro. Esses sao os dados da Carta 1:\n\n Estado: %s\n Codigo: %s\n Cidade: %s\n Populacao: %d\n Area: %.3f Km²\n PIB: %f Bilhoes de reais\n Pontos Turisticos: %d\n Densidade Populacional: %.2f hab/km²\n PIB per Capta: R$ %.2f \n", estado , codigo , cidade , populacao , area , pib , pontos , densidade , percapta);
     
     // Cadastro da Carta2:
     printf("\n\nInsira agora os dados da carta 2: \n");
@@ -75,10 +84,15 @@ int main() {
     
     printf("Pontos turisticos: \n");
     scanf("%d",&pontos2);
+
+    // Calculo densidade populacional e percapta carta2
+    densidade2 = populacao2 / area2;
+    percapta2 = pib2 / populacao2;
+    
     
     // Exibição dos Dados das Carta2:
 
-    printf("\nObrigado pelo cadastro.Esses sao os dados da Carta 2:\n\n Estado: %s\n Codigo: %s\n Cidade: %s\n Populacao: %d\n Area: %f Km²\n  PIB: %f Bilhoes de reais\n Pontos Turisticos: %d\n", estado2 , codigo2 , cidade2 , populacao2 , area2 , pib2 , pontos2);
+    printf("\nObrigado pelo cadastro.Esses sao os dados da Carta 2:\n\n Estado: %s\n Codigo: %s\n Cidade: %s\n Populacao: %d\n Area: %.3f Km²\n PIB: %f Bilhoes de reais\n Pontos Turisticos: %d\n Densidade Populacional: %.3f hab/km²\n PIB per Capta: R$ %.2f \n", estado2 , codigo2 , cidade2 , populacao2 , area2 , pib2 , pontos2 , densidade2 , percapta2);
 
     
     
